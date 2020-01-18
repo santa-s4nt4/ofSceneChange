@@ -1,3 +1,6 @@
+#ifndef SceneElement_cpp
+#define SceneElement_cpp
+
 #include "ofMain.h"
 
 class SceneElement {
@@ -12,3 +15,4 @@ public:
 	virtual void keyReleased(int key) {};
 	virtual void mouseReleased(int x, int y, int button) {};
 };
+#endif
