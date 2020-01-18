@@ -43,6 +43,7 @@ tignore is a file which makes git ignore files which should
 xcuserdata/
 
 # Visual Studio
+*.vs
 *.sdf
 *.opensdf
 *.suo

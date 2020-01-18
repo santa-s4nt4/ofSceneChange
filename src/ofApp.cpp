@@ -1,71 +1,68 @@
 #include "ofApp.h"
+#include "SampleSceneManager.h"
+
+SampleSceneManager manager;
+
+void ofApp::setup() {
+	manager.setup();
+}
+
+void ofApp::update() {
+	manager.update();
+}
+
+void ofApp::draw() {
+	manager.draw();
+}
+
+void ofApp::keyReleased(int key) {
+	if (key == ' ') {
+		if (!manager.nextElement()) {
+			//Create new manager if has no more elements
+			manager = *new SampleSceneManager();
+			manager.setup();
+		}
+	}
+
+	manager.keyReleased(key);
+}
+
+void ofApp::mousePressed(int x, int y, int button) {
+	manager.mouseReleased(x, y, button);
+}
+
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void ofApp::mouseReleased(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
+void ofApp::windowResized(int w, int h) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::gotMessage(ofMessage msg) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void ofApp::dragEvent(ofDragInfo dragInfo) {
+
+}
+
+
+//--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key){
+void ofApp::mouseDragged(int x, int y, int button) {
 
 }
 
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::keyPressed(int key) {
 
 }

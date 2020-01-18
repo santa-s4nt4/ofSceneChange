@@ -7,22 +7,21 @@ protected:
 	vector<SceneElement *> elements;
 
 public:
-	virtual void setup() = 0; // add SceneElement in this
+	virtual void setup() = 0; //add SceneElement in this
 
 	void init() {
 		for (int i = 0; i < elements.size(); i++) {
 			elements[i]->init();
 		}
 	}
-
 	void update() {
 		elements.at(elementIndex)->update();
-	}
+	};
 
 	void draw() {
 		ofSetWindowTitle("FPS:" + ofToString(ofGetFrameRate()));
 		elements.at(elementIndex)->draw();
-	}
+	};
 
 	void end() {
 		for (int i = 0; i < elements.size(); i++) {
@@ -38,22 +37,22 @@ public:
 	}
 
 	bool nextElement() {
-		elements[elementIndex]->end();
+		elements[elementIndex]->stop();
 		elementIndex++;
 		if (elementIndex >= elements.size()) {
 			elementIndex--;
 			return false;
-		} else {
+		}
+		else {
 			elements[elementIndex]->start();
 			return true;
 		}
 	};
 
-	virtual void keyRleased(int key) {
+	virtual void keyReleased(int key) {
 		elements.at(elementIndex)->keyReleased(key);
 	};
-
 	virtual void mouseReleased(int x, int y, int button) {
 		elements.at(elementIndex)->mouseReleased(x, y, button);
-	}
+	};
 };
