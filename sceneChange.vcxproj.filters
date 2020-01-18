@@ -7,10 +7,10 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="SceneElement.cpp">
+    <ClCompile Include="src\SceneElement.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
+    <ClCompile Include="src\SceneManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
