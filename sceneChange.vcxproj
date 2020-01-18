@@ -182,11 +182,15 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\SampleSceneElement.cpp" />
+    <ClCompile Include="src\SampleSceneManager.cpp" />
     <ClCompile Include="src\SceneElement.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\SampleSceneElement.h" />
+    <ClInclude Include="src\SampleSceneManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

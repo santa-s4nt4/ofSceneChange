@@ -13,6 +13,12 @@
     <ClCompile Include="src\SceneManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\SampleSceneElement.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SampleSceneManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -21,6 +27,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SampleSceneManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SampleSceneElement.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
